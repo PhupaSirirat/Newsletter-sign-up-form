@@ -1,19 +1,85 @@
 #root {
+  color: var(--DarkSlateGray);
   max-width: 1280px;
   margin: 0 auto;
-  text-align: center;
+}
+
+h1 {
+  font-family: Roboto-Bold;
+  font-size: 3.4em;
+  line-height: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  line-height: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  label {
+    font-family: Roboto-Bold;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
+
+  input {
+    background-color: var(--White);
+    padding: 0.75rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--Grey);
+    outline: none;
+    margin-bottom: 1rem;
+  }
+
+  button {
+  background-color: var(--DarkSlateGray);
+  font-family: Roboto-Bold;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 }
 
 .container {
-  width: 800px;
-  height: 500px;
+  width: 880px;
+  height: 560px;
   display: flex;
-  flex-direction: column;
+  gap: 3rem;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   border-radius: 1.5rem;
   background-color: var(--White);
   box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.content_container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img_container {
+  margin-right: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
 }
 
 .img_mobile {
@@ -21,10 +87,10 @@
 }
 
 .img_desktop {
+  height: 520px;
   object-fit: cover;
-  width: auto;
-  height: auto;
 }
+
 
 /* set up mobile screen */
 @media only screen and (max-width: 375px) {
