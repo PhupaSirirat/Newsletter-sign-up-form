@@ -24,17 +24,15 @@ function App() {
     if (isValidEmail()) {
       setIsValid(true);
       setIsConfirm(true);
-      // console.log("Email is valid");
     } else {
       setIsValid(false);
-      // console.log("Email is invalid");
     }
   };
 
   const handleDissmiss = () => {
     setIsConfirm(false);
     window.location.reload();
-  }
+  };
 
   return (
     <main>
@@ -43,8 +41,9 @@ function App() {
           <img src={IconSuccess} alt="" />
           <h1>Thanks for subscribing!</h1>
           <p>
-            A confirmation email has been sent to <span className="bold">{email}</span>. Please
-            open it and click the button inside to confirm your subscription.
+            A confirmation email has been sent to{" "}
+            <span className="bold">{email}</span>. Please open it and click the
+            button inside to confirm your subscription.
           </p>
           <button onClick={handleDissmiss}>Dissmiss message</button>
         </section>
@@ -55,15 +54,21 @@ function App() {
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
             <li>
-              <img src={IconList} alt="" />
+              <span className="icon_container">
+                <img src={IconList} alt="" />
+              </span>
               Product discovery and building what matters
             </li>
             <li>
-              <img src={IconList} alt="" />
+              <span className="icon_container">
+                <img src={IconList} alt="" />
+              </span>
               Measuring to ensure updates are a success
             </li>
             <li>
-              <img src={IconList} alt="" />
+              <span className="icon_container">
+                <img src={IconList} alt="" />
+              </span>
               And much more!
             </li>
           </ul>

@@ -36,7 +36,7 @@ li {
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   label {
     font-family: Roboto-Bold;
@@ -145,7 +145,7 @@ button {
   justify-content: end;
   border-radius: 1.5rem;
   background-color: var(--White);
-  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);  
+  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .confirm {
@@ -162,7 +162,7 @@ button {
   }
 
   p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   button {
@@ -173,22 +173,67 @@ button {
 
 .bold {
   font-family: Roboto-Bold;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 700;
+}
+
+.icon_container {
+  margin-top: 0.25rem;
 }
 
 /* set up mobile screen */
 @media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
   .container {
     width: 100vw;
+    height: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .content_container {
+    width: 90%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .img_container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img_mobile {
+    display: block;
+    object-fit: fill;
+  }
+  .img_desktop {
+    display: none;
+  }
+
+  .confirm_container {
+    width: 100vw;
     height: 100vh;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     border-radius: 0;
     box-shadow: none;
 
-    flex-direction: row;
+    button {
+      margin-top: 16rem;
+      margin-bottom: 3rem;
+    }
   }
 
-  .img_mobile {
-    display: block;
-  }
 }
